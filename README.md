@@ -10,7 +10,7 @@ Select the .vsix file you want to install and click the "Open" button\
 \
 Or...\
 \
-Move the entire folder to your extensions folder
+Move the entire folder to your extensions folder which should be **here**:
 ```
 Windows: %USERPROFILE%\.vscode\extensions
 macOS: $HOME/.vscode/extensions
