@@ -1,0 +1,34 @@
+{
+    "name": "vsnip",
+    "displayName": "vsnip",
+    "description": "Syntax highlighting for .nip pickit files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.77.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "nip",
+                "aliases": [
+                    "Nip",
+                    "nip"
+                ],
+                "extensions": [
+                    ".nip"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nip",
+                "scopeName": "source.nip",
+                "path": "./syntaxes/nip.tmLanguage.json"
+            }
+        ]
+    }
+}

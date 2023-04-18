@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nip",
+	"scopeName": "source.nip",
+	"fileTypes": [".nip"],
+	"patterns": [
+		{ "include": "#comments"    },
+		{ "include": "#brackets"    },
+		{ "include": "#variables"   },
+		{ "include": "#keywords"    },
+		{ "include": "#expressions" },
+		{ "include": "#separators"  },
+		{ "include": "#values"      },
+		{ "include": "#operations"  }
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.nip",
+					"match": "//.*$"
+				}
+			]
+		},
+		"brackets": {
+			"patterns": [
+				{
+					"name": "variable",
+					"begin": "\\[",
+					"end": "\\]",
+					"beginCaptures": {
+						"0": { "name": "string.regexp" }
+					},
+					"endCaptures": {
+						"0": { "name": "string.regexp" }
+					},
+					"patterns": [
+						{ "include": "#variables" }
+					]
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "\\[[^\\]]+\\]"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control",
+					"match": "(?:==|!=|&&|\\|\\||>=|<=)"
+				}
+			]
+		},
+		"expressions": {
+			"patterns": [
+				{
+					"name": "constant.numeric.nip",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"separators": {
+			"patterns": [
+				{
+					"name": "constant.character.escape",
+					"match": "#"
+				}
+			]
+		},
+		"values": {
+			"patterns": [
+				{
+					"name": "keyword.other",
+					"match": "\\b\\w+\\b"
+				}
+			]
+		},
+		"operations": {
+			"patterns": [
+				{
+					"name": "support.class",
+					"match": "[+\\-!*/]"
+				}
+			]
+		}
+	}
+}
