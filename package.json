@@ -3,6 +3,7 @@
     "displayName": "vsnip",
     "description": "Syntax highlighting for .nip pickit files",
     "version": "0.0.1",
+    "repository": "https://github.com/laztheripper/vsnip",
     "engines": {
         "vscode": "^1.77.0"
     },
